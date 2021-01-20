@@ -1,0 +1,20 @@
+.container {
+  font-family: 'Roboto', sans-serif;
+}
+.header {
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 3px;
+  border-bottom: solid 2px black;
+}
+
+.header small {
+  font-size: small;
+  margin-left: 1rem;
+  letter-spacing: 0px;
+}
+
+.results{
+  font-size: 16px;
+  text-justify: inter-word;
+  text-align: center;
+}
