@@ -3,8 +3,13 @@
 }
 .header {
   font-family: 'Fredoka One', cursive;
-  letter-spacing: 3px;
+  /* letter-spacing: 3px; */
   border-bottom: solid 2px black;
+  text-align: center;
+}
+
+.header h1 {
+  font-size:3rem;
 }
 
 .header small {
@@ -18,3 +23,33 @@
   text-justify: inter-word;
   text-align: center;
 }
+
+.d-flex {
+  justify-content: center;
+  justify-items: center;
+}
+#refresh, #ent, #fin, #spo, #cov, #pol {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  /* display: flex;
+  align-items: center; */
+}
+
+@media only screen and (max-width: 768px) {
+  .header h1 {
+    font-size:1.8rem;
+  }
+  #ent {
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .header h1 {
+    font-size:1rem;
+  }
+  #ent {
+    margin-left: 1rem;
+  }
+}
+
