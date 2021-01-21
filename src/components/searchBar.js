@@ -27,6 +27,7 @@ class SearchBar extends React.Component {
               aria-label="Search"
               value={this.state.searchTopic}
               onChange={this.handleChange}
+              id="search-box"
             />
             <input 
               type="submit" 
