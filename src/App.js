@@ -58,16 +58,19 @@ class App extends React.Component {
         <div className="header">
           <h1>News Application<small><a href="https://webhose.io/" target="_blank">(Webhose.io)</a></small></h1> 
         </div>
-        <SearchBar searchForTopic={this.searchForTopic} />
+        <div className="d-flex flex-row bd-highlight mb-3 row">
+            <div><button id="ent" className="btn btn-dark" onClick={()=>{this.searchForTopic("entertainment");}}>Entertainment</button></div>
+            <div><button id="fin" className="btn btn-dark" onClick={()=>{this.searchForTopic("finance");}}>Finance</button></div>
+            <div><button id="spo" className="btn btn-dark" onClick={()=>{this.searchForTopic("sports");}}>Sports</button></div>
+            <div><button id="cov" className="btn btn-dark" onClick={()=>{this.searchForTopic("covid");}}>Covid</button></div>
+            <div><button id="pol" className="btn btn-dark" onClick={()=>{this.searchForTopic("politics");}}>Politics</button></div>
+            <SearchBar searchForTopic={this.searchForTopic} />
+            <div><button id="refresh" className="btn btn-primary" onClick={()=>{this.searchForTopic(this.state.searchTopic);}}>Refresh</button></div>
+        </div>
         <div>
           {loading && (
             <p className="results">Searching for articles...</p>
           )}
-          {/* {this.state.articles.length>0 && (
-            <p className="results">
-              Displaying top 10 out of {totalResults} articles on "{searchTopic}"
-            </p>
-          )} */}
           {this.state.articles.length>0 && <ArticleList articles={articles} />}
           {apiError && <p className="results">Could not fetch any articles. Please try again.</p>} 
         </div> 
